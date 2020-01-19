@@ -1,0 +1,8 @@
+<mat-form-field>
+  <mat-label>{{filterTitle}} by</mat-label>
+  <mat-select [(value)]="selected" (selectionChange)="onFiltersChanged($event.value)">
+    <mat-option *ngFor="let filter of filtersOptions" [value]="filter">
+      {{filterName[filter]}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
